@@ -1,11 +1,11 @@
 
 server:
-  port: 8088
+  port: 8080
 
 info:
   app:
     name: ${spring.application.name}
-    description: ·À³ÁÃÔ·þÎñ
+    description: zz
 
 eureka:
   client:
@@ -19,9 +19,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://rm-bp1h92ouyhsa995y2.mysql.rds.aliyuncs.com:3306/anti-addiction?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
-    username: gms
-    password: PL2JvxDz90ocD
+    url: jdbc:mysql://127.0.0.1/test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 999521
 
     initialSize: 5
     minIdle: 1
