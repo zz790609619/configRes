@@ -1,0 +1,2 @@
+# configRes
+config
