@@ -1,0 +1,48 @@
+
+server:
+  port: 8088
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: ·À³ÁÃÔ·þÎñ
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-bp1h92ouyhsa995y2.mysql.rds.aliyuncs.com:3306/anti-addiction?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    username: gms
+    password: PL2JvxDz90ocD
+
+    initialSize: 5
+    minIdle: 1
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
