@@ -2,10 +2,6 @@
 server:
   port: 8090
 
-eureka:
-  client:
-    healthcheck:
-      enabled: true
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
